@@ -3,9 +3,9 @@
 /**
  * main - Entry point
  *
- * description: a c programe prints text  with printf
+ * description: a c programe used to prints text  with printf
  *
- * returns: return 0 always
+ * Return: always (success)
 */
 int main(void)
 {

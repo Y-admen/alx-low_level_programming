@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 /**
- * main : start poit
+ * main: start poit
  *
- * describtion : c program printing text using puts
+ * describtion: c program printing text using puts
  *
- * return : 0 (success)
+ * Return: always  0 (success)
 */ 
 
 int main(void)
