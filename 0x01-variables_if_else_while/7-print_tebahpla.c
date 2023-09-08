@@ -1,5 +1,11 @@
 #include <stdio.h>
-/***/
+/**
+ * main -entry point
+ *
+ * describtion: program that prints the lowercase alphabet in reverse
+ *
+ * Return: always 0 (success)
+*/
 
 int main(void)
 {
@@ -7,7 +13,9 @@ int main(void)
 
 	while (rlet > 'a')
 	{
-		putchar (rlet};
-		putchar ('\n');
+		putchar(rlet);
+		rlet--;
 	}
+	putchar("\n");
 	return (0);
+}
