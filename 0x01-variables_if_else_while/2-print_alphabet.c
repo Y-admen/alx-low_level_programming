@@ -8,7 +8,7 @@
 */
 int main(void)
 {
-	char let = i'a';
+	char let = 'a';
 
 	while (let <= 'z')
 	{
