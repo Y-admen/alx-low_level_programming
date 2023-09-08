@@ -4,12 +4,12 @@
  *
  * description: print the alphabet from a to z
  *
- * return: always 0 (success)
+ * Return: always 0 (success)
 */
 int main(void)
 {
-	char let = 'a';
-	
+	char let = i'a';
+
 	while (let <= 'z')
 	{
 		putchar (let);
