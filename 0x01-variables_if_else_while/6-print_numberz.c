@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
 *main -entry point
-*describtion:  prints all single digit numbers of base 10 
+*describtion:  prints all single digit numbers of base 10
 *Return: always 0 (success)
 */
 int main(void)
