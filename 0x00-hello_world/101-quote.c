@@ -2,12 +2,12 @@
 /**
  * main- entry point
  *
- * description: print text withou put,printf
+ * description:  C program that prints exactly a text  followed by a new line
  *
- * return 1
+ * Return: always 1 (fail)
 */
 int main(void)
-{	char lin[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+{	char  *lin = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 	write(1, lin, 59);
-	return (10);
+	return (1);
 }
