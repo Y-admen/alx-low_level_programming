@@ -16,6 +16,6 @@ int main(void)
 		putchar(rlet);
 		rlet--;
 	}
-	putchar("\n");
+	putchar('\n');
 	return (0);
 }
