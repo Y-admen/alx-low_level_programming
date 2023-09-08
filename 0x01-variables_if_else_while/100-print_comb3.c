@@ -12,10 +12,13 @@ int main(void)
 		{
 			putchar(i + 48);
 			putchar(x + 49);
-			putchar(',');
-			putchar(' ');
+			if (i + x != 17)
+			{
+				putchar(',');
+				putchar(' ');
+			}
 		}
 	}
-	putchar("\n");
+	putchar('\n');
 	return (0);
-	}
+}
