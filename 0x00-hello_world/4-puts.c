@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- * main: start poit
+ * main - entry point
  *
- * describtion: c program printing text using puts
+ * describtion: c program that  prints text using puts function
  *
  * Return: always  0 (success)
 */
