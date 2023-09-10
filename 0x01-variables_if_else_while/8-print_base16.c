@@ -10,11 +10,11 @@ int main(void)
 
 	while (num <= 102)
 	{
-			putchar(num + '0');
-			num++;
+		putchar(num);
+		num++;
 		if (num == 57)
 		{
-			putchar(num + 39);
+			num += 39;
 			num++;
 		}
 	}
