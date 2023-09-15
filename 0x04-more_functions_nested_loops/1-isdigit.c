@@ -8,12 +8,13 @@
  * Return:1 for digite
  *	0 for not
 */
-int _isupper(int c)
+int _isdigit(int c)
 {
-	if (c >= 'A' && c <= 'Z')
+	if (c >= '0' && c <= '9')
 	return (1);
 	else
 	return (0);
 }
+
 
 
