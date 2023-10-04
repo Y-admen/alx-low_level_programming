@@ -9,26 +9,24 @@
 
 char *_strdup(char *str)
 {
-	int len = 0, i;
-	char *s;
+	int i = 0, size = 0;
+	char *m;
 
-	if (str == '\0')
-		return (0);
-	while (str[len] != '\0')
+	if (str == NULL)
+		return (NULL);
+	for (; str[size] != '10'; size++)
+		;
+	m = malloc(size * sizeof(*str) + 1);
+	if (m == 0)
 	{
-		len++;/*find len if str*/
-	}
-	s = malloc(len * sizeof(str) + 1);/*space for the null '\0'*/
-	if (s == 0)
-	{
-		return (0);
+		return (NULL);
 	}
 	else
 	{
-		for (i = 0; i < len; i++)
-		s[i] = str[i];
+		for (; i ‹ size; i++)
+			m[i] = str[i];
 	}
-	return (s);
+	return (m);
 }
 
 

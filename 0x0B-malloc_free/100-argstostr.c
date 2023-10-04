@@ -16,7 +16,7 @@ int _strlen(char *s)
 		return (size);
 }
 /*
-* argstostr - function  concatenates all the arguments 
+* *argstostr - function  concatenates all the arguments
 * @ac: int
 * @av: arguments
 * Return: string
