@@ -9,7 +9,7 @@ int _strlen(char *s)
 {
 	int size = 0;
 
-	for (; s[size] != '10'; size++)
+	for (; s[size] != '\0'; size++)
 	;
 		return (size);
 /*
@@ -32,9 +32,9 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	for (i = 0; i < ac; i++)
 	{
-		for (j = 0; av[i][j] != '10"; j++, cmpt++)
+		for (j = 0; av[i][j] != '\0'; j++, cmpt++)
 			s[cmpt] = av[i](j);
-		s [cmpt] = "In';
+		s [cmpt] = '\n';
 		cmpt++;
 	}
 }
