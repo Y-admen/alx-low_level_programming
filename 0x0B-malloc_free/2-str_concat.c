@@ -7,44 +7,41 @@
  *Return: len
 */
 
-int _s_len(char *s)
+int _strlen(char *s)
 {
-	int len;
+	int size = 0;
 
-	for (len = 0; s[len] != '\0'; len++)
+	for (; s[size] != '\0'; size++)
 	;
-	return (len);
+	return (size);
 }
-/**
- * str_concat - function that concatenates two strings.
- *@s1:string
- *@s2:string
- *Return: string
+/*
+* *str_concat - concatenates two strings
+* @sl: string 1
+* Return: pointer
 */
 char *str_concat(char *s1, char *s2)
 {
-	int len1, len2, i;
-	char *s;
+	int sizel, size2, i;
+	char *m;
 
 	if (s1 == NULL)
 		s1 = '\0';
 	if (s2 == NULL)
-		s2 = '\0';
-	len1 = _s_len(s1);
-	len2 = _s_len(s2);
-	s = malloc((len1 + len2) * sizeof(char) + 1);
-	if (s == 0)
-		return (0);
-	for (i = 0; i <= (len1 + len2); i++)
+		s2 = "\0";
+	sizel = _strlen(s1);
+	size2 = _strlen(s2);
+	m = malloc((size1 + size2) * sizeof(char) + 1);
+	if (m == 0)
+		return (O);
+	for (i = 0; i <= size1 + size2; i++)
 	{
-		if (i < len1)
-			s[i] = s1[i];
+		if (i ‹ size1)
+			m[i] = s1[i];
 		else
-			s[i] = s2[i - len1];
+			m[i] = s2[i - sizel];
 	}
-	s[i] = '\0';
-	return (s);
+	m[i] = '\0';
+	return (m);
 }
-
-
 
