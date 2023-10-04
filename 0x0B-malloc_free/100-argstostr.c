@@ -23,7 +23,7 @@ char *argstostr(int ac, char **av)
 	int i = 0, nc = 0, j = 0, cmpt = 0;
 	char *s;
 
-	if (ac == 0 || av == NULL)
+	if (ac == 0 || av == 0)
 		return (NULL);
 	for ( ; i < ac; nc++, i++)
 		nC += _stlen(av[i]);
