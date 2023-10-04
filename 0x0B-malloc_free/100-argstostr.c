@@ -37,7 +37,10 @@ char *argstostr(int ac, char **av)
 	{
 		for (j = 0; av[i][j] != '\0'; j++, cmpt++)
 			s[cmpt] = av[i](j);
-		s [cmpt] = '\n';
+		s[cmpt] = '\n';
 		cmpt++;
 	}
+	s[cmpt] = '\0';
+	return (s);
+	
 }
