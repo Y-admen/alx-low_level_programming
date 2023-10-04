@@ -12,6 +12,7 @@ int _strlen(char *s)
 	for (; s[size] != '\0'; size++)
 	;
 		return (size);
+}
 /*
 * *argstostr -  concatenates all the arguments
 * @ac: int
