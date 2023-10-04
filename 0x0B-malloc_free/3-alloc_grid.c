@@ -23,9 +23,9 @@ int **alloc_grid(int width, int height)
 			tab[i] = malloc(sizeof(**tab) * width);/*colums*/
 			if (tab[i] == 0)/*check memo if null*/
 			{
-				while (i--)/*empty each row*/
+				while (i--)/*empty(free)  elements of each row*/
 					free(tab[i]);
-				free(tab);/*empty coloums*/
+				free(tab);/*free memo of pointer tab*/
 				return (NULL);
 			}
 			for (j = 0; j < width; j++)
