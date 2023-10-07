@@ -1,24 +1,39 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
-/*
-*main - it all starts here
-* Qargc: the number of arguments
-* Qargv: array of pointers to arguments
-* Return: Always 0.
-*/
-int main(int argc, char *argv[])
-{
-	int sum = 0;
-	char *c;
+int main(int argc, char *argv[]) {
+  int sum = 0, i;
 
-	while (--argc)
-	{
-		for (c = argv[argc]; *C; C++)
-			if (*c < '0' || *c > '9')
-				return (printf("Error\n"), 1);
-		sum += atoi(argv[argc]);
-	}
-	printf("%d\n", sum);
-	return (0);
+  // Check if any arguments were passed to the program.
+  if (argc == 1) {
+    printf("0\n");
+    return 0;
+  }
+
+  // Iterate over the arguments and check if they are valid integers.
+  for (i = 1; i < argc; i++) {
+    // Check if the argument is a digit.
+    if (!isdigit(argv[i])) {
+      printf("Error\n");
+      return 1;
+    }
+
+    // Convert the argument to an integer.
+    int number = atoi(argv[i]);
+
+    // Check if the number is positive.
+    if (number < 0) {
+      printf("Error\n");
+      return 1;
+    }
+
+    // Add the number to the sum.
+    sum += number;
+  }
+
+  // Print the sum of the valid arguments.
+  printf("%d\n", sum);
+
+  return 0;
 }
