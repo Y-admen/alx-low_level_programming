@@ -7,20 +7,18 @@ int main(int argc, char *argv[]) {
 	if (argc == 1)
 	printf("0\n");
 	else {
-	for (i = 1; i < argc; i++) 
-	{
-		if (isdigit(argv[i])) 
+		for (i = 0; i < argc; i++) 
 		{
-			sum += atoi(argv[i]);
-		} 
-		else 
-		{	
-			printf("Error\n");
-			return 1;
+			if (argv[i] < '0' || argv[i] > '9')
+			{	
+				printf("Error\n");
+				return (1);
+			}
+			else
+				sum += argv[i];
 		}
-	}
-	printf("%d\n", sum);
-	}
+		printf("%d\n", sum);
+		}
 	return 0;
 }
 
