@@ -22,6 +22,5 @@ int main(int argc, char *argv[])
 		mull = val1 * val2;
 		printf("%d\n", mull);
 	}
-	return (0);
 }
 
