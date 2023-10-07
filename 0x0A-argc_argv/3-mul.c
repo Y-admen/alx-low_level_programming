@@ -8,7 +8,7 @@
 */
 int main(int argc, char *argv[])
 {
-	int mul, val1, val2;
+	int mull, val1, val2;
 
 	if (argc != 3)
 	{
