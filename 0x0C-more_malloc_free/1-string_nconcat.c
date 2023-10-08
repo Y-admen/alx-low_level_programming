@@ -10,7 +10,7 @@ int _len(char *s)
 {
 	int i, len;
 
-	for (i = 0; s[i] != '\0';i++)
+	for (i = 0; s[i] != '\0'; i++)
 	       ;
 	len = i + 1;
 	return (len);
@@ -25,13 +25,13 @@ int _len(char *s)
 */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i, s1_len,mallen;
+	unsigned int i, s1_len, mallen;
 	char *t;
 
 	/*if NULL is passed, treat it as an empty string*/
-	if(s1 == NULL)
+	if (s1 == NULL)
 		s1 = "";
-	if(s2 == NULL)
+	if (s2 == NULL)
 		s2 = "";
 	s1_len = _len(s1);
 	mallen = s1_len + n + 1;
@@ -53,5 +53,5 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 }
 
 
-	
+
 
