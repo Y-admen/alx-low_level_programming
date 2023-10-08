@@ -1,4 +1,4 @@
-#include "main. h"
+#include "main.h"
 /*
 *_memset - fills memory with a constant byte.
 * @s: pointer to put the constant
@@ -8,7 +8,8 @@
 */
 char *_memset(char *s, char b, unsigned int n)
 {
-	char *ptr = S;
+	char *ptr;
+	ptr = s;
 
 	while (n--)
 		*s++ = b;
