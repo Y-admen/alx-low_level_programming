@@ -41,14 +41,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		return (NULL);
 	}
-	for (i = 0; i < (mallen); i++)
+	for (i = 0; i < (s1_len + n); i++)
 	{
 		if (i < s1_len)
 			t[i] = s1[i];
-		else
+		else if (i < (s1_len + n))
 			t[i] = s2[i - s1_len];/***********/
-		t[i] = '\0';
 	}
+	t[i] = '\0';
 	return (t);
 }
 
