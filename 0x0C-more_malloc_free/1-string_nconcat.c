@@ -1,57 +1,48 @@
-#include "main.h"
-
-/*
- * _len - calc len of string
- * @s: string
- * Return: len
-*/
-
-int _len(char *s)
-{
-	int i, len;
-
-	for (i = 0; s[i] != '\0'; i++)
-	       ;
-	len = i + 1;
-	return (len);
-}
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
- * string_nconcat -  concatenates two strings.
- * @s1:str 1
- * @s2:str 2
- * @n:num of char
- * Return: t
-*/
+ * string_nconcat - function to concatnate strings with n bytes
+ * @s1: destination for concatnation
+ * @s2: source of string
+ * @n: int type for size of byte
+ * Return: pointer to new memory allocated
+ */
+
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i, s1_len, mallen;
-	char *t;
+	int count, count1;
+	int sign = n;
+	char *ptr;
+	int len1, len2;
 
-	/*if NULL is passed, treat it as an empty string*/
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-	s1_len = _len(s1);
-	mallen = s1_len + n + 1;
-	t = malloc(mallen);
 
-	if (t == NULL)
+	for (len1 = 0; s1[len1] != '\0'; len1++)
+		;
+	for (len2 = 0; s2[len2] != '\0'; len2++)
+		;
+
+	if (sign >= len2)
 	{
+		sign = len2;
+		ptr = malloc(sizeof(char) * (len1 + len2 + 1));
+	}
+	else
+		ptr = malloc(sizeof(char) * (len1 + n + 1));
+	if (ptr == NULL)
 		return (NULL);
-	}
-	for (i = 0; i < (s1_len + n); i++)
+	for (count = 0; count < len1; count++)
 	{
-		if (i < s1_len)
-			t[i] = s1[i];
-		else if (i < (s1_len + n))
-			t[i] = s2[i - s1_len];/***********/
+		ptr[count] = s1[count];
 	}
-	t[i] = '\0';
-	return (t);
+	for (count1 = 0; count1 < sign; count1++)
+	{
+		ptr[count++] = s2[count1];
+	}
+	ptr[count++] = '\0';
+	return (ptr);
 }
-
-
-
-
