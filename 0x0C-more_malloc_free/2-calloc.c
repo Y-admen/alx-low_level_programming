@@ -1,11 +1,10 @@
 #include "main.h"
-/*
-*_memset - fills memory with a constant byte.
-* @s: pointer to put the constant
-* @b: constant
-* @n: max bytes to use
-* Return: s
-*/
+/**
+ * *_calloc - function to allocates memory
+ * @nmemb: unsigned int type
+ * @size: unsigned int type
+ * Return: return pointer to array
+ */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *ptr;
