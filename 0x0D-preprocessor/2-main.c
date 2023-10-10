@@ -6,6 +6,6 @@
 */
 int main(void)
 {
-	printf("%s\n", __file__);
+	printf("%s\n", __FILE__);/*file upper case*/
 	return (0);
 }
