@@ -27,8 +27,7 @@ int op_sub(int a, int b)
 /**
  * op_mul - mull a and b
  * @a: int 1
- * @:
- *  int 2
+ * @b:int 2
  *  Return: a*b
 */
 
