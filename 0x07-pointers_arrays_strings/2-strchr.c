@@ -17,6 +17,7 @@ char *_strchr(char *s, char c)
 	{
 	if (s[k] == c)
 	return (s + k);
+/*to return the add of the similarity not the value*/
 	}
 	return (0);
 }
