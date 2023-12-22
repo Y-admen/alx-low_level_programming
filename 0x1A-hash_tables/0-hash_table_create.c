@@ -14,16 +14,14 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	if (!size)
 	return (NULL); /* Zero is not a valid argument */
-	table = malloc(sizeof(hash_node_t));
+	table = malloc(sizeof(hash_table_t));
 	if (!table)
 	return (NULL); /* Allocation failed */
 	table->size = size;
-	table->array = malloc(sizeof(hash_node_t) * size);
+	table->array = malloc(sizeof(hash_node_t *) * size);
 	if (!array)
 	return (NULL); /* Allocation failed */
 	for (i = 0; i < size; ++i)
 		table->array[i] = NULL;
 	return (table);
-
-
 }
