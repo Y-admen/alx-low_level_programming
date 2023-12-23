@@ -10,29 +10,40 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned int index;
-	hash_node_t *newnode, *currentindex;
-
-	if (!key || !value)
-	return (0);
-	index = hash_djb2((const unsigned char *) key) % ht->size;
+	hash_node_t *currentindex, *newnode;
+	if (!ht || !key || key[0] == '\0' || !value)
+		return (0);
+	index = hash_djb2((const unsigned char *)key) % ht->size;
 	currentindex = ht->array[index];
-	for (currentindex;; currentindex->next)
+
+	while (currentindex)
 	{
-		if (!strcmp(currentindex->key, key))
+		if (strcmp(currentindex->key, key) == 0)
 		{
 			free(currentindex->value);
 			currentindex->value = strdup(value);
 			return (1);
 		}
+		currentindex = currentindex->next;
 	}
 
-	
 	newnode = malloc(sizeof(hash_node_t));
 	if (!newnode)
-	return (0);
+		return (0);
+
 	newnode->key = strdup(key);
 	newnode->value = strdup(value);
+	if (!newnode->key || !newnode->value)
+	{
+ /*Memory allocation failed, free allocated memory and return failure*/
+		free(newnode->key);
+		free(newnode->value);
+		free(newnode);
+		return 0;
+	}
+
 	newnode->next = ht->array[index];
 	ht->array[index] = newnode;
+
 	return (1);
 }
